@@ -54,6 +54,17 @@ class GameGUI:
     self.quit_button  = Button(self.bottom_frame, text="Закончить", highlightbackground ="grey", command=game.quit)
     self.quit_button.grid(row=0, column=1)
 
+    self.canvas = Canvas(master, width=800, height=600, background='lightgrey')
+    self.canvas.grid(row=2, column=0)
+
+    symbols = PhotoImage(file='./images/symbols.gif')
+    self.canvas.create_image(300,200, anchor=NW, image=symbols)
+    
+#    from PIL import Image, ImageTk
+#
+#    img = Image.open("'./images/symbols..jpeg")
+#    img.show()
+    
   # Locates GUI window in the center of a screen
   def center(self, master):
     masterWidth  = 800
