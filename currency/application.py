@@ -1,17 +1,16 @@
 ################################################################################
-#   initial.py
+#   application.py
 #
 #   Initialization of the App
 #
 #   06.05.2018  Created by:  zhenya
-#   23.05.2018  Last update
+#   06.02.2019  Last update
 ################################################################################
 from game     import *
 from game_gui import *
-from valuta   import *
 
 class Application:
   def __init__(self):
-    self.game = Game()
     self.root = Tk()
+    self.game = Game()
     self.gui  = GameGUI(self.root, self.game)
